@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/about/Testimonlal.js", "components/about/Hero.js", "pages/gioi-thieu/index.tsx", "components/about/WhyUs.js", "pages/sitemap.xml.tsx", "components/common/nav/useThemeSwitch.js", "components/common/nav/UserNav.js", "pages/index.js"],
+  "exclude": ["node_modules"]
+}
