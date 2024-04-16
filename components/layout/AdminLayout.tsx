@@ -8,6 +8,7 @@ import {
   AiOutlineContacts,
   AiOutlineFileAdd,
 } from "react-icons/ai";
+import { IoIdCardSharp } from "react-icons/io5";
 
 import AdminNav from "../common/nav/AdminNav";
 import AppHead from "../common/AppHead";
@@ -20,8 +21,10 @@ interface Props {
 
 const navItems = [
   { href: "/admin", icon: AiOutlineDashboard, label: "Dashboard" },
+  { href: "/admin/products", icon: IoIdCardSharp , label: "Sản phẩm" },
   { href: "/admin/posts", icon: AiOutlineContainer, label: "Bài viết" },
   { href: "/admin/users", icon: AiOutlineTeam, label: "Người dùng" },
+
 ];
 
 const AdminLayout: FC<Props> = ({ title, children }): JSX.Element => {

@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import { ChangeEventHandler, FC, useEffect, useState } from "react";
-
+import Image from 'next/image';
 interface Props {
   initialValue?: string;
   onChange(file: File): void;
@@ -38,7 +38,7 @@ const ThumbnailSelector: FC<Props> = ({
       />
       <label htmlFor="thumbnail">
         {selectedThumbnail ? (
-          <img
+          <Image
             src={selectedThumbnail}
             alt=""
             className={classNames(commonClass, "object-cover")}

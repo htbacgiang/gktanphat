@@ -1,5 +1,7 @@
 import Link from "next/link";
 import UserNav from "../components/common/nav/UserNav";
+import Error from '../public/404.png'
+import Image from "next/image";
 
 import { FacebookIcon, FacebookShareButton, TwitterShareButton,TwitterIcon,
     WhatsappIcon,WhatsappShareButton,RedditShareButton,RedditIcon,LinkedinShareButton,LinkedinIcon   } from 'next-share';
@@ -10,8 +12,9 @@ const NotFound = () => {
 		{/* <UserNav /> */}
 
 		<div className="notfound">
-			<div className="notfound-404">
-				<h1>404</h1>
+
+			<div className="">
+			<Image src={Error} />
 			</div>
 			<h2>Oops! Không tìm thấy trang</h2>
 			<p>Click vào đây để: <Link href="/">Quay lại trang chủ</Link></p>

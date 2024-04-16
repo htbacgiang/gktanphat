@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 
 const aboutContent = {
   heading: {
-    title: "BÀI VIẾT GẦN ĐÂY",
+    title: "DANH MỤC SẢN PHẨM",
   },
 };
-const HeroBlog = ({ className, title, subTitle }) => {
+const HeroProduct = ({ className, title, subTitle }) => {
   if (title) {
     title = title;
   } else {
@@ -65,4 +65,4 @@ const HeroBlog = ({ className, title, subTitle }) => {
   );
 };
 
-export default HeroBlog;
+export default HeroProduct;

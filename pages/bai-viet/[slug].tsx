@@ -17,7 +17,7 @@ const host = 'https://giaketanphat.com/bai-viet'
 
 export const APP_NAME = "Giá kệ Tân Phát";
 const SinglePost: NextPage<Props> = ({ post }) => {
-  const { title, content, tags, meta, slug, thumbnail, createdAt, relatedPosts } = post;
+  const { title, content, meta, slug, thumbnail, createdAt, relatedPosts } = post;
   return (
       <DefaultLayout>
         <Head>

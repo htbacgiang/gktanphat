@@ -11,6 +11,9 @@ import 'swiper/css/navigation';
 // import '../app/globals.css';
 
 import banner from '../../public/social-banner.jpg' 
+import banner1 from '../../public/baner-ke-sieu-thi.jpg' 
+import banner2 from '../../public/baner-gia-ke-sieu-thi.jpg' 
+
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
@@ -35,10 +38,10 @@ export default function Banner() {
         <Image src={banner} alt='baner giá kệ siêu thị'/>
         </SwiperSlide>
         <SwiperSlide>
-        <Image src={banner} alt='baner giá kệ siêu thị'/>
+        <Image src={banner1} alt='baner giá kệ siêu thị'/>
         </SwiperSlide>
         <SwiperSlide>
-        <Image src={banner} alt='baner giá kệ siêu thị'/>
+        <Image src={banner2} alt='baner giá kệ siêu thị'/>
         </SwiperSlide>
 
       </Swiper>

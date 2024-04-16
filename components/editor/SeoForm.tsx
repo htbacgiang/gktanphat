@@ -69,13 +69,6 @@ const SEOForm: FC<Props> = ({
         placeholder="slug-goes-here"
         label="Slug:"
       />
-      <Input
-        value={tags}
-        onChange={handleChange}
-        name="tags"
-        placeholder="React, Next JS"
-        label="Tags:"
-      />
 
       <div className="relative">
         <textarea

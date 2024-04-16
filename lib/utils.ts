@@ -6,6 +6,8 @@ import Post, { PostModelSchema } from "../models/Post";
 import { authOptions } from "../pages/api/auth/[...nextauth]";
 import { CommentResponse, PostDetail, UserProfile } from "../utils/types";
 import dbConnect from "./dbConnect";
+import { type ClassValue, clsx } from "clsx"
+import { twMerge } from "tailwind-merge"
 
 interface FormidablePromise<T> {
   files: formidable.Files;
@@ -70,4 +72,6 @@ export const isAuth = async (req: NextApiRequest, res: NextApiResponse) => {
 const getLikedByOwner = (likes: any[], user: UserProfile) =>
   likes.includes(user.id);
 
-
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+}

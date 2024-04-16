@@ -129,8 +129,10 @@
   }
 }
 
-
-
+.detail_page .img-thumbnail.active{
+  border: 1px solid orangered;
+  padding: 2px;
+}
 
 @tailwind base;
 @tailwind components;
