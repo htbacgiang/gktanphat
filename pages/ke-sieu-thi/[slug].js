@@ -5,7 +5,7 @@ import Image from "next/image";
 import DefaultLayout from "../../components/layout/DefaultLayout";
 import parse from "html-react-parser";
 import BreadCrumbs from "../../components/layout/BreadCrumbs";
-
+import Link from "next/link";
 const tabs = [
   {
     id: "Description",
@@ -107,9 +107,9 @@ const DetailKST = (props) => {
                   </li>
                   <li className="mb-1">
                     <b className="font-medium w-36 inline-block">Loại kệ:</b>
-                    <a className="text-orange-500" href="/ke-sieu-thi">
+                    <Link className="text-orange-500" href="/ke-sieu-thi">
                       {product?.loaike}
-                    </a>
+                    </Link>
                   </li>
                   <li className="mb-1">
                     <b className="font-medium w-36 inline-block">Chiều cao:</b>
