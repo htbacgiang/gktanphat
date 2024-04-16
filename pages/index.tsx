@@ -46,7 +46,6 @@ const Home: NextPage<Props> = ({ posts}) => {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:url" content="https://giaketanphat.com" />
-        <meta name="google-site-verification" content="nwi0zLqAjbXlbr6xN0bOq6Gm8q6Evgj0RvjC-QCbZVE" />
       </Head>
       <br />
       <Banner />

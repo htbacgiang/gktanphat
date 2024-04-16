@@ -9,7 +9,7 @@ const Logo = () => {
         className="logo rounded-full overflow-hiden" 
         style={{ width: "20%" }}
         >
-            <Image src={logoImg}  alt="logo tân phát express chuyển hàng trọn gói" className="rounded-full "/>
+            <Image src={logoImg}  alt="Logo giá kệ siêu thị Tân Phát" className="rounded-full "/>
         </div>
     </Link>
   )

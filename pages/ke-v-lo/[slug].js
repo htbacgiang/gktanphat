@@ -5,6 +5,8 @@ import DefaultLayout from "../../components/layout/DefaultLayout";
 import parse from "html-react-parser";
 import BreadCrumbs from "../../components/layout/BreadCrumbs";
 import Link from "next/link";
+import Image from "next/image";
+import Table from "react-bootstrap/Table";
 const tabs = [
   {
     id: "Description",
@@ -31,7 +33,7 @@ const DetailKVlo = (props) => {
 
     { name: "Sản phẩm", url: "/san-pham" },
     {
-      name: `${product.title?.substring(0, 30)} ...`,
+      name: `${product.title?.substring(0, 20)} ...`,
       url: `/ke-v-lo/${product?.slug}`,
     },
   ];
@@ -39,49 +41,47 @@ const DetailKVlo = (props) => {
     <DefaultLayout>
       <Head>
         <title> {product.title} | Giá Kệ Tân Phát</title>
-        <meta
-          name="description"
-          content="Giá kệ siêu thị Tân Phát, với gần một thập kỷ hoạt động trong ngành cung cấp giải pháp kệ hàng, đã nhanh chóng trở thành một trong những tên tuổi uy tín và đáng tin cậy tại Việt Nam"
-        />
+        <meta name="description" content={product?.description} />
         <meta name="author" content="Giá kệ Tân Phát" />
         <meta
           property="og:title"
-          content="Kệ siêu thị lưng lưới | Giá Kệ Tân Phát"
+          content={`${product?.title} | Giá Kệ Tân Phát`}
         />
-        <meta
-          property="og:description"
-          content="Giá kệ siêu thị Tân Phát, với gần một thập kỷ hoạt động trong ngành cung cấp giải pháp kệ hàng, đã nhanh chóng trở thành một trong những tên tuổi uy tín và đáng tin cậy tại Việt Nam"
-        />
+        <meta property="og:description" content={product?.description} />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://res.cloudinary.com/digaabr5l/image/upload/v1705450749/gktanphat/baner11_copy_hegza4.jpg"
-        />
+        <meta property="og:image" content={product.images[0]} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:url" content="https://giaketanphat.com/san-pham" />
+        <meta
+          property="og:url"
+          content={`https://giaketanphat.com/ke-v-lo/${product?.slug}`}
+        />
       </Head>
 
-      <section className="mt-[90px] sm:mt-[120px] detail_page">
+      <section className="mt-[70px] sm:mt-[120px] detail_page">
         <div className="xl:w-9/12 md:w-full mx-auto border-b-[1px] border-b-gray-300">
           <BreadCrumbs breadCrumbs={breadCrumbs} />
 
           <div className="max-w-container mx-auto px-4">
-            <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-8 gap-4 h-full -mt-5 xl:-mt-8 pb-10 p-4">
+            <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-8 gap-4 h-full -mt-5 xl:-mt-8 pb-10 p-1">
               <div className="h-full xl:col-span-3">
                 <div className="flex flex-col">
-                  <img
+                  <Image
                     src={product.images[tab]}
                     alt={product.images[tab]}
+                    width={width} // Specify the width of the image
+                    height={height} // Specify the height of the image
                     className="w-full h-full aspect-square object-cover rounded-xl"
                   />
 
                   <div className="flex flex-row gap-3 h-24 mt-4">
                     {product.images.map((img, index) => (
-                      <img
+                      <Image
                         key={index}
                         src={img}
                         alt={img}
+                        width={width} // Specify the width of the image
+                        height={height} // Specify the height of the image
                         className={` h-20 w-20 rounded-md img-thumbnail cursor-pointer ${isActive(
                           index
                         )}`}
@@ -91,49 +91,131 @@ const DetailKVlo = (props) => {
                   </div>
                 </div>
               </div>
-              <div className="h-full xl:col-span-4 mx-6">
+              <div className="h-full xl:col-span-5 mx-2">
                 <h2 className="font-semibold text-2xl mb-4">
                   {product?.title}
                 </h2>
                 <p className="mb-4 text-gray-500">{product?.description}</p>
                 <ul className="mb-5">
-                  <li className="mb-1">
-                    <b className="font-medium w-36 inline-block">Tình trạng:</b>
-                    <span className="text-green-500">Còn hàng</span>
-                  </li>
-                  <li className="mb-1">
-                    <b className="font-medium w-36 inline-block">Loại kệ:</b>
-                    <Link className="text-orange-500" href="/ke-v-lo">
-                      {product?.loaike}
-                    </Link>
-                  </li>
-                  <li className="mb-1">
-                    <b className="font-medium w-36 inline-block">Chiều cao:</b>
-                    <span className="text-gray-500">{product?.chieucao}</span>
-                  </li>
-                  <li className="mb-1">
-                    <b className="font-medium w-36 inline-block">Chiều dài:</b>
-                    <span className="text-gray-500">{product?.chieudai}</span>
-                  </li>
-                  <li className="mb-1">
-                    <b className="font-medium w-36 inline-block">
-                      Độ rộng mâm:
-                    </b>
-                    <span className="text-gray-500"> {product?.dorongmam}</span>
-                  </li>
-                  <li className="mb-1">
-                    <b className="font-medium w-36 inline-block">Số tầng:</b>
-                    <span className="text-gray-500"> {product?.sotang}</span>
-                  </li>
-                  <li className="mb-1">
-                    <b className="font-medium w-36 inline-block"> Màu sắc:</b>
-                    <span className="text-gray-500"> {product?.mausac}</span>
-                  </li>
-                  <li className="mb-1">
-                    <b className="font-medium w-36 inline-block">
-                      Thương hiệu:
-                    </b>
-                    <span className="text-gray-500">Giá kệ Tân Phát</span>
+                  <li>
+                    <Table striped borderless>
+                      <tbody className="mb-1">
+                        <tr>
+                          <th>
+                            <b className="font-medium w-36 inline-block">
+                              Tình trạng:
+                            </b>{" "}
+                          </th>
+                          <th>
+                            <span className="text-green-500">Còn hàng</span>
+                          </th>
+                        </tr>
+                      </tbody>
+
+                      <tbody>
+                        <tr>
+                          <td>
+                            {" "}
+                            <b className="font-medium w-36 inline-block">
+                              Loại kệ:
+                            </b>
+                          </td>
+                          <td>
+                            <Link href="/ke-sieu-thi">
+                              <span className="text-orange-500">
+                                {product?.loaike}{" "}
+                              </span>
+                            </Link>
+                          </td>
+                        </tr>
+                      </tbody>
+
+                      <tbody>
+                        <tr>
+                          <td>
+                            <b className="font-medium w-36 inline-block">
+                              Chiều cao:
+                            </b>
+                          </td>
+                          <td>
+                            <span className="text-gray-500">
+                              {product?.chieucao}
+                            </span>
+                          </td>
+                        </tr>
+                      </tbody>
+
+                      <tbody>
+                        <tr>
+                          <td>
+                            <b className="font-medium w-36 inline-block">
+                              Chiều dài:
+                            </b>
+                          </td>
+                          <td>
+                            <span className="text-gray-500">
+                              {product?.chieudai}
+                            </span>
+                          </td>
+                        </tr>
+                      </tbody>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <b className="font-medium w-36 inline-block">
+                              Độ rộng mâm:
+                            </b>
+                          </td>
+                          <td>
+                            <span className="text-gray-500">
+                              {product?.dorongmam}
+                            </span>
+                          </td>
+                        </tr>
+                      </tbody>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <b className="font-medium w-36 inline-block">
+                              Số tầng:
+                            </b>
+                          </td>
+                          <td>
+                            <span className="text-gray-500">
+                              {product?.sotang}
+                            </span>
+                          </td>
+                        </tr>
+                      </tbody>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <b className="font-medium w-36 inline-block">
+                              Màu sắc:
+                            </b>
+                          </td>
+                          <td>
+                            <span className="text-gray-500">
+                              {product?.mausac}
+                            </span>
+                          </td>
+                        </tr>
+                      </tbody>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <b className="font-medium w-36 inline-block">
+                              Thương hiệu:
+                            </b>
+                          </td>
+                          <td>
+                            <span className="text-gray-500">
+                              Giá kệ Tân Phát
+                            </span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </Table>
                   </li>
                 </ul>
                 <div className="flex flex-wrap gap-2 mb-5">
@@ -150,7 +232,7 @@ const DetailKVlo = (props) => {
             </div>
             <div className="h-full w-full md:col-span-2 xl:col-span-4 xl:px-4 flex flex-col gap-6 justify-center">
               <div>
-                <div className=" space-x-4  pt-4">
+                <div className=" space-x-4 pt-4">
                   {tabs.map((tab) => (
                     <button
                       key={tab.id}

@@ -41,7 +41,7 @@ export default function Banner() {
         <Image src={banner1} alt='baner giá kệ siêu thị'/>
         </SwiperSlide>
         <SwiperSlide>
-        <Image src={banner2} alt='baner giá kệ siêu thị'/>
+        <Image src={banner} alt='baner giá kệ siêu thị'/>
         </SwiperSlide>
 
       </Swiper>

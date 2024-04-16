@@ -31,7 +31,7 @@ const DetailPK = (props) => {
 
     { name: "Sản phẩm", url: "/san-pham" },
     {
-      name: `${product.title?.substring(0, 30)} ...`,
+      name: `${product.title?.substring(0, 20)} ...`,
       url: `/phu-kien-sieu-thi/${product?.slug}`,
     },
   ];
@@ -39,30 +39,24 @@ const DetailPK = (props) => {
     <DefaultLayout>
       <Head>
         <title> {product.title} | Giá Kệ Tân Phát</title>
-        <meta
-          name="description"
-          content="Giá kệ siêu thị Tân Phát, với gần một thập kỷ hoạt động trong ngành cung cấp giải pháp kệ hàng, đã nhanh chóng trở thành một trong những tên tuổi uy tín và đáng tin cậy tại Việt Nam"
-        />
+        <meta name="description" content={product?.description} />
         <meta name="author" content="Giá kệ Tân Phát" />
         <meta
           property="og:title"
-          content="Kệ siêu thị lưng lưới | Giá Kệ Tân Phát"
+          content={`${product?.title} | Giá Kệ Tân Phát`}
         />
-        <meta
-          property="og:description"
-          content="Giá kệ siêu thị Tân Phát, với gần một thập kỷ hoạt động trong ngành cung cấp giải pháp kệ hàng, đã nhanh chóng trở thành một trong những tên tuổi uy tín và đáng tin cậy tại Việt Nam"
-        />
+        <meta property="og:description" content={product?.description} />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://res.cloudinary.com/digaabr5l/image/upload/v1705450749/gktanphat/baner11_copy_hegza4.jpg"
-        />
+        <meta property="og:image" content={product.images[0]} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:url" content="https://giaketanphat.com/san-pham" />
+        <meta
+          property="og:url"
+          content={`https://giaketanphat.com/phu-kien-sieu-thi/${product?.slug}`}
+        />
       </Head>
 
-      <section className="mt-[90px] sm:mt-[120px] detail_page">
+      <section className="mt-[70px] sm:mt-[120px] detail_page">
         <div className="xl:w-9/12 md:w-full mx-auto border-b-[1px] border-b-gray-300">
           <BreadCrumbs breadCrumbs={breadCrumbs} />
 
@@ -91,7 +85,7 @@ const DetailPK = (props) => {
                   </div>
                 </div>
               </div>
-              <div className="h-full xl:col-span-4 mx-6">
+              <div className="h-full xl:col-span-5 mx-2">
                 <h2 className="font-semibold text-2xl mb-4">
                   {product?.title}
                 </h2>

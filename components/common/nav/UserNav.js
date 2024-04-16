@@ -38,7 +38,10 @@ const Header = () => {
         scrolled ? "scrolled" : ""
       }`}
     >
-      <Logo />
+      <div className="flex justify-center  sm:justify-between  ">
+        {" "}
+        <Logo />
+      </div>
       <button
         className="inline-block sm:hidden z-50"
         onClick={toggle}
