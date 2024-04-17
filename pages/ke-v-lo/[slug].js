@@ -62,7 +62,7 @@ const DetailKVlo = (props) => {
         <div className="xl:w-9/12 md:w-full mx-auto border-b-[1px] border-b-gray-300">
           <BreadCrumbs breadCrumbs={breadCrumbs} />
 
-          <div className="max-w-container mx-auto px-4">
+          <div className="max-w-container mx-auto px-2">
             <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-8 gap-4 h-full -mt-5 xl:-mt-8 pb-10 p-1">
               <div className="h-full xl:col-span-3">
                 <div className="flex flex-col">
@@ -74,7 +74,7 @@ const DetailKVlo = (props) => {
                     className="w-full h-full aspect-square object-cover rounded-xl"
                   />
 
-                  <div className="flex flex-row gap-3 h-24 mt-4">
+                  <div className="flex flex-row gap-1 h-24 mt-4">
                     {product.images.map((img, index) => (
                       <Image
                         key={index}
