@@ -14,7 +14,7 @@ const testimonlalContent = {
     {
       img: "/images/person-1-min.jpg",
       name: "Chị Hoa",
-      titleRole: "Hoa Mart - Nam Định",
+      titleRole: "Nam Định",
       quote:
         " Giá kệ làm từ vật liệu chất lượng cao, rất bền và chắc chắn. Tôi tin tưởng rằng sản phẩm này sẽ phục vụ cửa hàng của tôi trong một thời gian dài mà không cần phải lo lắng về việc thay thế hoặc sửa chữa. Nhân viên của Tân Phát rất nhiệt tình và chu đáo. Họ đã giúp tôi chọn lựa sản phẩm phù hợp và giải quyết mọi thắc mắc của tôi một cách nhanh chóng và hiệu quả.",
     },
@@ -43,18 +43,17 @@ const Testimonlal = ({ className }) => {
   useEffect(() => {
     setIsEnd(sliderRef.current.swiper.isEnd);
     setIsBeginning(sliderRef.current.swiper.setIsBeginning);
-    
   }, []);
 
-  const prevHandler = useCallback(()=>{
-    if(!sliderRef.current) return;
-    sliderRef.current.swiper.slidePrev()
-  }, [])
-  const nextHandler = useCallback(()=>{
-    if(!sliderRef.current) return;
-    sliderRef.current.swiper.slideNext()
-  }, [])
-  
+  const prevHandler = useCallback(() => {
+    if (!sliderRef.current) return;
+    sliderRef.current.swiper.slidePrev();
+  }, []);
+  const nextHandler = useCallback(() => {
+    if (!sliderRef.current) return;
+    sliderRef.current.swiper.slideNext();
+  }, []);
+
   return (
     <section className={`${className} overflow-hidden mt-6`}>
       <div className="container px-4 mx-auto">
@@ -146,7 +145,7 @@ const Testimonlal = ({ className }) => {
         <div className="flex justify-center mb-3">
           <div className="flex space-x-3">
             <div
-            onClick={prevHandler}
+              onClick={prevHandler}
               className={`${
                 isBeginning == true
                   ? "opacity-30 bg-gray-300 text-gray-600 !cursor-pointer"
@@ -164,7 +163,7 @@ const Testimonlal = ({ className }) => {
               />
             </div>
             <div
-            onClick={nextHandler}
+              onClick={nextHandler}
               className={`${
                 isEnd == true
                   ? "opacity-30 bg-gray-300 text-gray-600 !cursor-pointer"

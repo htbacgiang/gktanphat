@@ -3,7 +3,7 @@ import AppHead from "../common/AppHead";
 import UserNav from "../common/nav/UserNav";
 import Footer from "../common/Footer";
 import GoogleAnalytics from "../common/GoogleAnalytics";
-
+import ZaloChatWidget from '../ZaloChatWidget'
 interface Props {
   title?: string;
   desc?: string;
@@ -19,6 +19,8 @@ const DefaultLayout: FC<Props> = ({ children, title, desc }): JSX.Element => {
       <div className="min-h-screen bg-primary dark:bg-primary-dark transition">
         <UserNav />
         <GoogleAnalytics />
+      <ZaloChatWidget />
+
         <div className="mx-auto">{children}</div>
         <Footer />
       </div>

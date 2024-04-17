@@ -2,19 +2,15 @@ import Link from "next/link";
 import UserNav from "../components/common/nav/UserNav";
 import Error from '../public/404.png'
 import Image from "next/image";
-import DefaultLayout from "../components/layout/DefaultLayout";
 
 import { FacebookIcon, FacebookShareButton, TwitterShareButton,TwitterIcon,
     WhatsappIcon,WhatsappShareButton,RedditShareButton,RedditIcon,LinkedinShareButton,LinkedinIcon   } from 'next-share';
 const NotFound = () => {
   return (
-<DefaultLayout > 
-
 
 <div id="notfound" className="">
-		{/* <UserNav /> */}
-		<div className="notfound mt-[250px] sm:mt-[360px]">
-
+<UserNav />
+		<div className="notfound mt-[300px] sm:mt-[370px]">
 			<div className="">
 			<Image src={Error} />
 			</div>
@@ -26,8 +22,6 @@ const NotFound = () => {
 			</div>
 		</div>
 	</div>
-	</DefaultLayout>
-
   );
 };
 export default NotFound;

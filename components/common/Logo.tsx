@@ -7,7 +7,6 @@ const Logo = () => {
     <Link href="/" className="flex items-start text-dark">
         <div 
         className="logo rounded-full overflow-hiden" 
-        style={{ width: "20%" }}
         >
             <Image src={logoImg}  alt="Logo giá kệ siêu thị Tân Phát" className="rounded-full "/>
         </div>
