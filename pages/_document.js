@@ -8,7 +8,7 @@ class MyDocument extends Document {
       <Html>
         <Head>
           {/* Zalo SDK script */}
-          <script src="https://sp.zalo.me/plugins/sdk.js"></script>
+          <script async src="https://sp.zalo.me/plugins/sdk.js"></script>
         </Head>
         <body>
           <Main />
