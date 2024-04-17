@@ -38,6 +38,7 @@ const Header = () => {
         scrolled ? "scrolled" : ""
       }`}
     >
+      
       <div className="flex justify-center sm:justify-between ">
         {" "}
         <Logo />

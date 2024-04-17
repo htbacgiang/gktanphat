@@ -31,7 +31,7 @@ const DetailKST = (props) => {
   const breadCrumbs = [
     { name: "Trang chủ", url: "/" },
 
-    { name: "Sản phẩm", url: "/san-pham" },
+    { name: "Kệ siêu thị", url: "/ke-sieu-thi" },
     {
       name: `${product.title?.substring(0, 20)} ...`,
       url: `/ke-sieu-thi/${product?.slug}`,

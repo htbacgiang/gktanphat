@@ -31,7 +31,7 @@ const DetailKVlo = (props) => {
   const breadCrumbs = [
     { name: "Trang chủ", url: "/" },
 
-    { name: "Sản phẩm", url: "/san-pham" },
+    { name: "Kệ V lỗ", url: "/ke-v-lo" },
     {
       name: `${product.title?.substring(0, 20)} ...`,
       url: `/ke-v-lo/${product?.slug}`,

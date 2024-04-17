@@ -29,7 +29,7 @@ const DetailPK = (props) => {
   const breadCrumbs = [
     { name: "Trang chủ", url: "/" },
 
-    { name: "Sản phẩm", url: "/san-pham" },
+    { name: "Phụ kiện", url: "/phu-kien-sieu-thi" },
     {
       name: `${product.title?.substring(0, 20)} ...`,
       url: `/phu-kien-sieu-thi/${product?.slug}`,

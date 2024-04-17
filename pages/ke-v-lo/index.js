@@ -45,8 +45,8 @@ const KeVlo = (props) => {
       <div className="pb-10 mt-24">
         <div className="container mx-auto p-3">
           <BreadCrumbs breadCrumbs={breadCrumbs} />
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
-            {products.slice(0, 8).map((product, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
+            {products.slice(0, 20).map((product, index) => (
               <KetonloItem key={product._id} product={product} />
             ))}
           </div>

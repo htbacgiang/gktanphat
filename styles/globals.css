@@ -142,6 +142,16 @@
   border: 1px solid orangered;
   padding: 2px;
 }
+/* components/ZaloChat.css */
+
+/* Container styles */
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .zalo-chat-widget-container {
+    display: none
+  }
+}
 
 @tailwind base;
 @tailwind components;
