@@ -56,7 +56,7 @@ const DetailPK = (props) => {
         />
       </Head>
 
-      <section className="mt-[70px] sm:mt-[120px] detail_page">
+      <section className="mt-[70px] sm:mt-[100px] detail_page">
         <div className="xl:w-9/12 md:w-full mx-auto border-b-[1px] border-b-gray-300">
           <BreadCrumbs breadCrumbs={breadCrumbs} />
 

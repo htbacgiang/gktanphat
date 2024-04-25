@@ -22,7 +22,7 @@ const KeVItem = ({ product }) => {
           </div>
           <div className="p-4 flex-1 flex flex-col justify-between items-center">
             <div className="grid gap-1.5 ">
-              <h3 className="font-semibold line-clamp-2 mb-1">
+              <h3 className="font-semibold line-clamp-2 mb-1 text-dark dark:text-primary">
                 {product.title}
               </h3>
             </div>

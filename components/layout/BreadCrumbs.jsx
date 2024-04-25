@@ -8,10 +8,13 @@ const BreadCrumbs = ({ breadCrumbs }) => {
       <div className="container max-w-screen-xl mx-auto px-4">
         <ol className="inline-flex flex-wrap text-gray-600 space-x-1 md:space-x-3 items-center">
           {breadCrumbs?.map((breadCrumb, index) => (
-            <li key={index} className="inline-flex items-center">
+            <li
+              key={index}
+              className="inline-flex items-center text-dark dark:text-primary"
+            >
               <Link
                 href={breadCrumb.url}
-                className="text-gray-600 hover:text-blue-600"
+                className="text-gray-600 hover:text-blue-600 text-dark dark:text-primary"
               >
                 {breadCrumb.name}
               </Link>

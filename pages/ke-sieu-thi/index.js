@@ -5,6 +5,7 @@ import { useState, useContext, useEffect } from "react";
 import ProductItem from "../../components/product/ProductItem";
 import Dataset from "../../models/Product";
 import BreadCrumbs from "../../components/layout/BreadCrumbs";
+import Kelungluoi from "../../components/product/Kelungluoi";
 const Kesieuthi = (props) => {
   const [products, setProducts] = useState(props.products);
   const breadCrumbs = [
@@ -53,6 +54,8 @@ const Kesieuthi = (props) => {
               <ProductItem key={product._id} product={product} />
             ))}
           </div>
+          {/* {parse(product.content)} */}
+          <Kelungluoi />
         </div>
       </div>
     </DefaultLayout>
