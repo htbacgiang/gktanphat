@@ -86,11 +86,13 @@ const DetailPK = (props) => {
                 </div>
               </div>
               <div className="h-full xl:col-span-5 mx-2">
-                <h2 className="font-semibold text-2xl mb-4">
+                <h2 className="font-semibold text-2xl mb-4 text-dark dark:text-primary">
                   {product?.title}
                 </h2>
 
-                <p className="mb-4 text-gray-500">{product?.description}</p>
+                <p className="mb-4 text-gray-500 text-dark dark:text-primary">
+                  {product?.description}
+                </p>
 
                 <div className="flex flex-wrap gap-2 mb-5">
                   <button className="px-4 py-2 inline-block text-white bg-orange-600 border border-transparent rounded-md hover:bg-blue-700">

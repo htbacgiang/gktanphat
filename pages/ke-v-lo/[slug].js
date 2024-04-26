@@ -92,11 +92,13 @@ const DetailKVlo = (props) => {
                 </div>
               </div>
               <div className="h-full xl:col-span-5 mx-2">
-                <h2 className="font-semibold text-2xl mb-4">
+                <h2 className="font-semibold text-2xl mb-4 text-dark dark:text-primary">
                   {product?.title}
                 </h2>
-                <p className="mb-4 text-gray-500">{product?.description}</p>
-                <ul className="mb-5">
+                <p className="mb-4 text-gray-500 text-dark dark:text-primary">
+                  {product?.description}
+                </p>
+                <ul className="mb-5 text-dark dark:text-primary">
                   <li>
                     <Table striped borderless>
                       <tbody className="mb-1">
@@ -138,7 +140,7 @@ const DetailKVlo = (props) => {
                             </b>
                           </td>
                           <td>
-                            <span className="text-gray-500">
+                            <span className="text-gray-500 text-dark dark:text-primary">
                               {product?.chieucao}
                             </span>
                           </td>
@@ -153,7 +155,7 @@ const DetailKVlo = (props) => {
                             </b>
                           </td>
                           <td>
-                            <span className="text-gray-500">
+                            <span className="text-gray-500 text-dark dark:text-primary">
                               {product?.chieudai}
                             </span>
                           </td>
@@ -167,7 +169,7 @@ const DetailKVlo = (props) => {
                             </b>
                           </td>
                           <td>
-                            <span className="text-gray-500">
+                            <span className="text-gray-500 text-dark dark:text-primary">
                               {product?.dorongmam}
                             </span>
                           </td>
@@ -181,7 +183,7 @@ const DetailKVlo = (props) => {
                             </b>
                           </td>
                           <td>
-                            <span className="text-gray-500">
+                            <span className="text-gray-500 text-dark dark:text-primary">
                               {product?.sotang}
                             </span>
                           </td>
@@ -195,7 +197,7 @@ const DetailKVlo = (props) => {
                             </b>
                           </td>
                           <td>
-                            <span className="text-gray-500">
+                            <span className="text-gray-500 text-dark dark:text-primary">
                               {product?.mausac}
                             </span>
                           </td>
@@ -209,7 +211,7 @@ const DetailKVlo = (props) => {
                             </b>
                           </td>
                           <td>
-                            <span className="text-gray-500">
+                            <span className="text-gray-500 text-dark dark:text-primary">
                               Giá kệ Tân Phát
                             </span>
                           </td>
