@@ -21,7 +21,7 @@ const HeroProduct = ({ className, title, subTitle }) => {
 
   return (
     <section className={`${className}`}>
-      <div className="container px-4 mx-auto mt-5">
+      <div className="container px-4 mx-auto">
         <div className="lg:flex w-full lg:w-10/12 mx-auto items-center justify-between">
           <div className="text-center lg-max-w-4xl mx-auto">
             {subTitle && (

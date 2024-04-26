@@ -47,7 +47,7 @@ const Kesieuthi = (props) => {
           content="https://giaketanphat.com/ke-ton-duc-lo"
         />
       </Head>
-      <div className="mt-[70px] sm:mt-[91px]">
+      <div className="mt-[60px] sm:mt-[91px] pt-1">
         <div className="container mx-auto p-3">
           <BreadCrumbs breadCrumbs={breadCrumbs} />
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">

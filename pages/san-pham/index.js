@@ -30,7 +30,11 @@ const Products = (props) => {
         <meta property="og:url" content="https://giaketanphat.com/san-pham" />
       </Head>
 
-      <HeroProduct className="mt-[70px] sm:mt-[91px]" title="" subTitle="" />
+      <HeroProduct
+        className="mt-[60px] sm:mt-[91px] pt-1"
+        title=""
+        subTitle=""
+      />
       <div className="pb-10">
         <div className="container mx-auto p-5">
           <div className="gap-3 mt-6">
