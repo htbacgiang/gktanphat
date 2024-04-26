@@ -3,6 +3,7 @@ import AppHead from "../common/AppHead";
 import UserNav from "../common/nav/UserNav";
 import Footer from "../common/Footer";
 import GoogleAnalytics from "../common/GoogleAnalytics";
+import RingPhone from "../about/ContactSection"
 interface Props {
   title?: string;
   desc?: string;
@@ -19,6 +20,7 @@ const DefaultLayout: FC<Props> = ({ children, title, desc }): JSX.Element => {
         <UserNav />
         <GoogleAnalytics />
         <div className="mx-auto">{children}</div>
+        <RingPhone />
         <Footer />
       </div>
     </>
