@@ -24,17 +24,6 @@ const storyContent = {
   },
   kstTS: {
     heading: "2. Thông số kỹ thuật của kệ siêu thị lưng lưới",
-    p1: "Chiều cao: Có thể lựa chọn từ 120cm, 150cm, 180cm và 210cm.",
-    p2: "Chiều dài: Có các tùy chọn chiều dài là 70cm, 90cm và 120cm",
-    p3: "Chiều rộng kệ đơn: 41cm ",
-    p4: "Chiều rộng kệ đôi: 76cm ",
-    p5: "Chiều rộng mâm tầng: Có sẵn các kích thước 30cm -  35cm ",
-    p6: "Tải trọng kệ: Tải trọng mỗi tầng kệ dao động từ 50kg đến 70kg, tùy thuộc vào cấu trúc và chất liệu của kệ",
-    p7: "Số tầng kệ: Có thể lựa chọn từ 3 đến 6 tầng tùy theo nhu cầu sử dụng và không gian trưng bày.",
-    p8: "Màu sắc: Màu sắc phổ biến trắng sữa, đen,",
-    p9: "Diềm mica chắn hàng: Có các màu sắc như xanh dương, xanh lá, đỏ, trắng sữa và mica trong để lựa chọn.",
-    p10: "Những thông số này cung cấp sự linh hoạt trong việc tùy chỉnh kệ siêu thị theo nhu cầu cụ thể của từng cửa hàng, đồng thời đảm bảo tính chất lượng và đa dạng trong trưng bày hàng hóa.",
-    p11: "Nếu bạn đang phân vân không biết chọn loại giá kệ siêu thị nào phù hợp cho cửa hàng của mình, đừng lo lắng. Đội ngũ nhân viên của chúng tôi luôn sẵn sàng tư vấn miễn phí cho bạn 24/7. Dựa trên loại mặt hàng bạn kinh doanh và không gian cửa hàng, chúng tôi sẽ cung cấp những tư vấn chuyên môn và phù hợp nhất, giúp bạn tiết kiệm chi phí và tối ưu hóa hiệu suất kinh doanh.",
   },
   kstList: [
     {
@@ -128,7 +117,7 @@ const Kelungluoi = ({ className }) => {
             của chúng tôi. Nếu máy bận, vui lòng để lại tin nhắn và chúng tôi sẽ
             gọi lại ngay sau đó.
           </p>
-          <Image src={banner} />
+          <Image src={banner} alt="gia-ke-sieu-thi-tan-phat" />
           {storyContent.kstWhy.heading && (
             <h2 className="font-bold text-gray-800 text-xl md:text-2xl mt-2 mb-5 dark:text-light dark:text-primary">
               {storyContent.kstWhy.heading}
@@ -151,87 +140,63 @@ const Kelungluoi = ({ className }) => {
               {storyContent.kstWhy.p1}
             </p>
           )}
-          <Image src={kedoi} />
-
-          <ul className="list-none">
-            {storyContent.kstList.map((item, index) => (
-              <li className="flex items-start mb-3" key={item.title}>
-                <div>
-                  <h3 className="text-gray-800 text-base text-dark dark:text-primary font-semibold">
-                    {item.title}:
-                  </h3>
-
-                  <p className="text-gray-500 text-dark dark:text-light text-dark dark:text-primary">
-                    {item.description}
-                  </p>
-                </div>
-              </li>
-            ))}
-          </ul>
+          <Image alt="ke-sieu-thi-luoi-doi" src={kedoi} />
 
           {storyContent.kstTS.heading && (
             <h2 className="font-bold text-gray-800 text-xl md:text-2xl mt-2 mb-5 dark:text-light dark:text-primary">
               {storyContent.kstTS.heading}
             </h2>
           )}
-
-          {storyContent.kstTS.p1 && (
-            <p className="leading-relaxed mb-1 text-dark dark:text-primary">
-              {storyContent.kstTS.p1}
-            </p>
-          )}
-          {storyContent.kstTS.p2 && (
-            <p className="leading-relaxed mb-1 text-dark dark:text-primary">
-              {storyContent.kstTS.p2}
-            </p>
-          )}
-          {storyContent.kstTS.p3 && (
-            <p className="leading-relaxed mb-1 text-dark dark:text-primary">
-              {storyContent.kstTS.p3}
-            </p>
-          )}
-          {storyContent.kstTS.p4 && (
-            <p className="leading-relaxed mb-1 text-dark dark:text-primary">
-              {storyContent.kstTS.p4}
-            </p>
-          )}
-          {storyContent.kstTS.p5 && (
-            <p className="leading-relaxed mb-1 text-dark dark:text-primary">
-              {storyContent.kstTS.p5}
-            </p>
-          )}
-          {storyContent.kstTS.p6 && (
-            <p className="leading-relaxed mb-1 text-dark dark:text-primary">
-              {storyContent.kstTS.p6}
-            </p>
-          )}
-          {storyContent.kstTS.p7 && (
-            <p className="leading-relaxed mb-1 text-dark dark:text-primary">
-              {storyContent.kstTS.p7}
-            </p>
-          )}
-          {storyContent.kstTS.p8 && (
-            <p className="leading-relaxed mb-1 text-dark dark:text-primary">
-              {storyContent.kstTS.p8}
-            </p>
-          )}
-          {storyContent.kstTS.p9 && (
-            <p className="leading-relaxed mb-1 text-dark dark:text-primary">
-              {storyContent.kstTS.p9}
-            </p>
-          )}
-          <Image src={Gif} />
-
-          {storyContent.kstTS.p10 && (
-            <b className="leading-relaxed mb-1 text-dark dark:text-primary">
-              {storyContent.kstTS.p10}
+          <span className="leading-relaxed text-dark dark:text-primary">
+            <b>
+              Những thông số này cung cấp sự linh hoạt trong việc tùy chỉnh kệ
+              siêu thị theo nhu cầu cụ thể của từng cửa hàng, đồng thời đảm bảo
+              tính chất lượng và đa dạng trong trưng bày hàng hóa.
             </b>
-          )}
-          {storyContent.kstTS.p11 && (
-            <i className="leading-relaxed mb-1 text-dark dark:text-primary">
-              {storyContent.kstTS.p11}
-            </i>
-          )}
+          </span>
+          <div className="flex flex-col">
+            <span className="leading-relaxed text-dark dark:text-primary">
+              <b> Chiều cao: </b>
+              Có thể lựa chọn từ 120cm, 150cm, 180cm và 210cm.
+            </span>
+            <span className="leading-relaxed text-dark dark:text-primary">
+              <b> Chiều dài: </b>
+              Có các tùy chọn chiều dài là 70cm, 90cm và 120cm
+            </span>
+            <span className="leading-relaxed text-dark dark:text-primary">
+              <b> Chiều rộng kệ đơn: </b>
+              41cm
+            </span>
+            <span className="leading-relaxed text-dark dark:text-primary">
+              <b> Chiều rộng kệ đôi: </b>
+              76cm
+            </span>
+            <span className="leading-relaxed text-dark dark:text-primary">
+              <b> Chiều rộng mâm tầng: </b>
+              Có sẵn các kích thước 30cm - 35cm
+            </span>
+            <span className="leading-relaxed text-dark dark:text-primary">
+              <b> Tải trọng kệ: </b>
+              Tải trọng mỗi tầng kệ dao động từ 50kg đến 70kg, tùy thuộc vào cấu
+              trúc và chất liệu của kệ
+            </span>
+            <span className="labout:blank#blockedeading-relaxed text-dark dark:text-primary">
+              <b> Số tầng kệ: </b>
+              Có thể lựa chọn từ 3 đến 6 tầng tùy theo nhu cầu sử dụng và không
+              gian trưng bày.
+            </span>
+            <span className="labout:blank#blockedeading-relaxed text-dark dark:text-primary">
+              <b>Màu sắc: </b>
+              Màu sắc phổ biến trắng sữa, đen
+            </span>
+            <span className="labout:blank#blockedeading-relaxed text-dark dark:text-primary">
+              <b>Diềm mica chắn hàng: </b>
+              Có các màu sắc như xanh dương, xanh lá, đỏ, trắng sữa và mica
+              trong để lựa chọn.
+            </span>
+          </div>
+
+          <Image src={Gif} alt="ke-sieu-thi" />
 
           {storyContent.kstWhy2.heading && (
             <h2 className="font-bold text-gray-800 text-xl md:text-2xl mt-2 mb-5 dark:text-light dark:text-primary ">
@@ -248,15 +213,43 @@ const Kelungluoi = ({ className }) => {
           </b>
           <ul className="list-none">
             {storyContent.kstList2.map((item, index) => (
-              <li className="flex items-start mb-3" key={item.title}>
+              <li className="flex items-start mb-1" key={item.title}>
                 <div>
                   <p className="text-dark dark:text-primary">{item.title}</p>
                 </div>
               </li>
             ))}
           </ul>
-          <Image src={cuahang} />
-
+          <div className="justify-center items-center flex flex-col mt-1 mb-2">
+            <Image
+              alt="Kệ tôn đục lỗ cho siêu thị mini"
+              className=""
+              width={800}
+              height={530}
+              src="https://res.cloudinary.com/digaabr5l/image/upload/v1714114779/gktanphat/ke-sieu-thi-luoi-doi_ed7xpf.jpg"
+            />
+            <p className="mt-1">Kệ siêu thị lưng lưới</p>
+          </div>
+          <div className="justify-center items-center flex flex-col mt-2 mb-2">
+            <Image
+              alt="Kệ tôn đục lỗ cho siêu thị mini"
+              className=""
+              width={800}
+              height={530}
+              src="https://res.cloudinary.com/digaabr5l/image/upload/v1714114693/gktanphat/lap-dat-ke-sieu-thi_kfbmnd.jpg"
+            />
+            <p className="mt-1">Lắp đặt kệ siêu thị cho siêu thị mini</p>
+          </div>
+          <div className="justify-center items-center flex flex-col mt-1 mb-2">
+            <Image
+              alt="Kệ siêu thị đơn áp tường"
+              className=""
+              width={800}
+              height={530}
+              src="https://res.cloudinary.com/digaabr5l/image/upload/v1714114684/gktanphat/ke-sieu-thi-luoi-don_z96ddw.jpg"
+            />
+            <p className="mt-1">Kệ siêu thị đơn áp tường</p>
+          </div>
           <b className="leading-relaxed text-dark dark:text-primary">
             Lắp đặt kệ siêu thị lưng lưới tại Tân Phát không chỉ mang lại sản
             phẩm chất lượng cao mà còn đi kèm với các dịch vụ chuyên nghiệp và
@@ -269,22 +262,49 @@ const Kelungluoi = ({ className }) => {
             chỉ giúp tăng hiệu suất làm việc mà còn đem lại sự hài lòng và tin
             tưởng từ phía khách hàng.
           </p>
-          <p className="leading-relaxed text-gray-500 mb-2 text-dark dark:text-primary">
-            Nếu bạn đang tìm kiếm các giải pháp lưu trữ và trưng bày hàng hóa
-            cho kho hàng của mình, hãy liên hệ với chúng tôi qua Hotline, Zalo:
-            <b className="text-[#ff5e00fb]"> 0866.572.271 </b> hoặc qua fanpage
-            chính thức
-            <Link href="https://www.facebook.com/giaketanphathn">
-              <a className="text-[blue] font-bold"> Giá kệ Tân Phát </a>
-            </Link>{" "}
-            để được tư vấn chi tiết hơn.
-          </p>
-          <b className="leading-relaxed text-dark dark:text-primary">
-            Đội ngũ chuyên viên của chúng tôi sẽ đồng hành cùng bạn để đưa ra
-            các giải pháp tối ưu nhất, phù hợp với nhu cầu và yêu cầu cụ thể của
-            bạn. Hãy liên hệ ngay để nhận được sự hỗ trợ tận tình và chuyên
-            nghiệp nhất từ Giá kệ siêu thị Tân Phát!
-          </b>
+          <div className="flex-col flex  text-dark dark:text-primary mt-3">
+            <h3 className="font-bold">
+              {" "}
+              Liên hệ ngay hôm nay để biết thêm chi tiết và nhận ưu đãi đặc
+              biệt:
+            </h3>
+            <span>
+              <b>Địa chỉ: </b>{" "}
+              <span className="text-[#ff5e00fb]">
+                Thị trấn Phùng, huyện Đan Phượng, thành phố Hà Nội{" "}
+              </span>
+            </span>
+            <span>
+              <b>Hotline </b>{" "}
+              <span className="text-[#ff5e00fb]">0866.572.271 </span>
+            </span>
+            <span>
+              <b>Email: </b>
+              <span className="text-[#ff5e00fb]">
+                kinhdoanh@giaketanphat.com{" "}
+              </span>
+            </span>
+            <span>
+              <b>Website: </b>{" "}
+              <span className="text-[#ff5e00fb]">giaketanphat.com </span>
+            </span>
+            <span>
+              <b>Fanpage: </b>{" "}
+              <span className="text-[#ff5e00fb]">
+                {" "}
+                <Link href="https://www.facebook.com/giaketanphathn">
+                  <a className="text-[#ff5e00fb] font-bold">
+                    {" "}
+                    Giá kệ Tân Phát{" "}
+                  </a>
+                </Link>{" "}
+              </span>
+            </span>
+            <b className="text-[green]">
+              Tạo sự thay đổi cho cửa hàng của bạn và làm cho nó đẹp hơn với giá
+              kệ siêu thị Tân Phát!
+            </b>
+          </div>
         </motion.div>
       </div>
     </section>

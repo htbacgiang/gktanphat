@@ -45,7 +45,7 @@ const PhukienST = (props) => {
           content="https://giaketanphat.com/phu-kien-sieu-thi"
         />
       </Head>
-      <div className="pb-10 mt-24">
+      <div className="mt-[70px] sm:mt-[91px]">
         <div className="container mx-auto p-3">
           <BreadCrumbs breadCrumbs={breadCrumbs} />
 

@@ -1,6 +1,5 @@
 import DefaultLayout from "../../components/layout/DefaultLayout";
 import Head from "next/head";
-import { getData } from "../../utils/fetchData";
 import { useState, useContext, useEffect } from "react";
 import ProductItem from "../../components/product/ProductItem";
 import Dataset from "../../models/Product";
@@ -46,7 +45,7 @@ const Kesieuthi = (props) => {
           content="https://giaketanphat.com/ke-sieu-thi"
         />
       </Head>
-      <div className="pb-10 mt-24">
+      <div className="mt-[70px] sm:mt-[91px]">
         <div className="container mx-auto p-3">
           <BreadCrumbs breadCrumbs={breadCrumbs} />
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">

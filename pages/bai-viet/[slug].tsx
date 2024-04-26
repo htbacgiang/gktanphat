@@ -34,7 +34,7 @@ const SinglePost: NextPage<Props> = ({ post }) => {
         <meta property="og:url" content={`https://giaketanphat.com/bai-viet/${slug}`} />
 
       </Head>
-      <div className="pb-20 container mx-auto px-4 mt-10 md:mt-24 max-w-2xl md:max-w-4xl lg:max-w-5xl">
+      <div className="pb-20 container mx-auto px-4 mt-[70px] sm:mt-[91px] max-w-2xl md:max-w-4xl lg:max-w-5xl">
       <br />
         <h1 className="text-4xl font-semibold text-primary-dark dark:text-primary py-2 item-center text-center ">
           {title}

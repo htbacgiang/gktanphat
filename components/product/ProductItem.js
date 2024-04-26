@@ -11,7 +11,7 @@ const ProductItem = ({ product }) => {
           <div className="aspect-16/9">
             <img
               alt={product.title}
-              className="object-cover w-full aspect-[1.5] dark:filter dark:grayscale dark:contrast-150 transition-transform
+              className="object-cover w-full aspect-[1.0] transition-transform
               hover:scale-105 ease duration-300"
               src={
                 product.images && product.images.length > 0

@@ -5,6 +5,7 @@ import { useState, useContext, useEffect } from "react";
 import KetonloItem from "../../components/product/KetonloItem";
 import Dataset from "../../models/Product";
 import BreadCrumbs from "../../components/layout/BreadCrumbs";
+import Ketonlo from "../../components/product/Ketonlo";
 
 const Kesieuthi = (props) => {
   const [products, setProducts] = useState(props.products);
@@ -46,7 +47,7 @@ const Kesieuthi = (props) => {
           content="https://giaketanphat.com/ke-ton-duc-lo"
         />
       </Head>
-      <div className="pb-10 mt-24">
+      <div className="mt-[70px] sm:mt-[91px]">
         <div className="container mx-auto p-3">
           <BreadCrumbs breadCrumbs={breadCrumbs} />
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
@@ -54,6 +55,7 @@ const Kesieuthi = (props) => {
               <KetonloItem key={product._id} product={product} />
             ))}
           </div>
+          <Ketonlo />
         </div>
       </div>
     </DefaultLayout>

@@ -53,7 +53,7 @@ const HeroBlog = ({ className, title, subTitle }) => {
                   },
                 }}
                 viewport={{ once: true }}
-                className="text-2xl mt-10 sm:text-3xl md:text-4xl font-bold text-[#404041] dark:text-light"
+                className="text-2xl mt-10 sm:text-3xl md:text-4xl font-bold text-[#404041] dark:text-light text-dark dark:text-primary"
               >
                 {title}
               </motion.h1>

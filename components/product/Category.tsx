@@ -20,7 +20,7 @@ const Category = () => {
                             <div className="aspect-16/9">
                                 <Image
                                     alt={category.alt}
-                                    className="object-cover w-full aspect-[1.5] dark:filter dark:grayscale dark:contrast-150 transition-transform hover:scale-105 ease duration-300"
+                                    className="object-cover w-full aspect-[1.0] transition-transform hover:scale-105 ease duration-300"
                                     src={category.src}
                                 />
                             </div>
