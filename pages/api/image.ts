@@ -49,6 +49,7 @@ const readAllImages: NextApiHandler = async (req, res) => {
       resource_type: "image",
       type: "upload",
       prefix: "gktanphat",
+      max_results: 1000,
     });
 
     const images = resources.map(({ secure_url }: any) => ({

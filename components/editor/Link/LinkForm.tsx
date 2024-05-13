@@ -45,7 +45,7 @@ const LinkForm: FC<Props> = ({
         autoFocus
         type="text"
         className="bg-transparent rounded border-2 border-secondary-dark focus:border-primary-dark dark:focus:border-primary transition p-2 text-primary-dark dark:text-primary"
-        placeholder="https://example.com"
+        placeholder="https://giaketanphat.com"
         value={link.url}
         onChange={({ target }) => setLink({ ...link, url: target.value })}
       />
@@ -63,7 +63,7 @@ const LinkForm: FC<Props> = ({
           className="text-secondary-dark dark:text-secondary-light"
           htmlFor="open-in-new-tab"
         >
-          open in new tab
+          Mở trong tad mới
         </label>
 
         <div className="flex-1 text-right">

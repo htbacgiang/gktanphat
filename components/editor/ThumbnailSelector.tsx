@@ -38,10 +38,11 @@ const ThumbnailSelector: FC<Props> = ({
       />
       <label htmlFor="thumbnail">
         {selectedThumbnail ? (
-          <Image
+          <img
             src={selectedThumbnail}
             alt=""
-            className={classNames(commonClass, "object-cover")}
+            className={classNames(commonClass, "object-cover")
+            }
           />
         ) : (
           <PosterUI label="Thumbnail" />

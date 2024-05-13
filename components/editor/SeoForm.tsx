@@ -28,7 +28,7 @@ const SEOForm: FC<Props> = ({
     HTMLTextAreaElement | HTMLInputElement
   > = ({ target }) => {
     let { name, value } = target;
-    if (name === "meta") value = value.substring(0, 150);
+    if (name === "meta") value = value.substring(0, 200);
     const newValues = { ...values, [name]: value };
     setValues(newValues);
     onChange(newValues);
@@ -79,7 +79,7 @@ const SEOForm: FC<Props> = ({
           placeholder="Meta description 150 characters will be fine"
         ></textarea>
         <p className="absolute bottom-3 right-3 text-primary-dark dark:text-primary text-sm">
-          {meta.length}/150
+          {meta.length}/200
         </p>
       </div>
     </div>
