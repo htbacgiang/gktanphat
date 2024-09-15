@@ -18,7 +18,10 @@ const Kesieuthi = ({ products, totalProducts, currentPage, totalPages }) => {
   ];
   const router = useRouter();
 
-  const handleChange = (event, value) => {};
+  const handleChange = (event, value) => {
+    // Update the URL with the new page number
+    router.push(`/ke-ton-duc-lo?page=${value}`);
+  };
   return (
     <DefaultLayout>
       <Head>

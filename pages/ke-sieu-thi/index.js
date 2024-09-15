@@ -7,6 +7,7 @@ import Kelungluoi from "../../components/product/Kelungluoi";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import { useRouter } from "next/router";
+
 const Kesieuthi = ({ products, totalProducts, currentPage, totalPages }) => {
   const breadCrumbs = [
     { name: "Trang chủ", url: "/" },
@@ -18,7 +19,11 @@ const Kesieuthi = ({ products, totalProducts, currentPage, totalPages }) => {
   ];
   const router = useRouter();
 
-  const handleChange = (event, value) => {};
+  const handleChange = (event, value) => {
+    // Update the URL with the new page number
+    router.push(`/ke-sieu-thi?page=${value}`);
+  };
+
   return (
     <DefaultLayout>
       <Head>
@@ -82,7 +87,7 @@ const Kesieuthi = ({ products, totalProducts, currentPage, totalPages }) => {
           </div>
         </div>
       </div>
-      <Kelungluoi className="" />
+      <Kelungluoi />
     </DefaultLayout>
   );
 };

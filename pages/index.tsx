@@ -91,8 +91,6 @@ const Home: NextPage<Props> = ({ posts, kesieuthiProducts,ketonloProducts}) => {
           ))}
            
           </div>
-           {/* Hiển thị danh mục Kệ tôn đục lỗ */}
- 
         </div>
       </div>
       <HeroBlog className="" title="" subTitle="" />
