@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/about/Testimonlal.js", "components/about/Hero.js", "pages/gioi-thieu/index.tsx", "components/about/WhyUs.js", "pages/sitemap.xml.tsx", "components/common/nav/useThemeSwitch.js", "components/common/nav/UserNav.js", "pages/index.tsxx", "pages/api/products/index.ts", "pages/san-pham/index.js", "pages/index.js", "components/product/ProductItem.jsx", "components/product/ProductItem.js", "pages/ke-sieu-thi/index.js", "pages/ke-sieu-thi/[slug].js", "pages/admin/products/index.js", "pages/admin/posts/index.tsx", "pages/admin/products/index.js", "components/product/Kelungluoi.js", "pages/api/whoami.js", "lib/productUtils.js"],
+  "exclude": ["node_modules"]
+}
