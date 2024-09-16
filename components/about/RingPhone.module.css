@@ -2,7 +2,7 @@
 
 .helpContainer {
   position: fixed;
-  bottom: 40px;
+  bottom: 50px;
   right: 1px;
   align-items: center;
   z-index: 9999;
@@ -13,54 +13,28 @@
   width: 120px;
   height: 110px;
   cursor: pointer;
-  top: 10px;
-    right: -11px;
+  top: 50px;
+  right: -35px;
 }
 .zaloRing {
   position: relative;
   width: 120px;
   height: 110px;
-  top: 10px;
-    right: -35px;
+  top: 0px;
+  right: -35px;
   cursor: pointer;
 }
-.phoneRingCircle {
-  width: 85px;
-  height: 85px;
-  position: absolute;
-  background-color: transparent;
-  border-radius: 100%;
-  border: 2px solid #e60808;
-  animation: phoneRingCircleAnim 1.2s infinite ease-in-out;
-  transform-origin: 50% 50%;
-  opacity: 0.5;
-}
 
-.zaloRingCircle {
-  width: 70px;
-  height: 70px;
-  position: absolute;
-  background-color: transparent;
-  border-radius: 100%;
-  border: 2px solid blue;
-  animation: phoneRingCircleAnim 1.2s infinite ease-in-out;
-  transform-origin: 50% 50%;
-  opacity: 0.5;
-  
-}
 .phoneRingCircleFill {
   width: 55px;
   height: 55px;
   position: absolute;
-  background-color: rgba(230, 8, 8, 0.7);
   border-radius: 100%;
   animation: phoneRingCircleFillAnim 2.3s infinite ease-in-out;
   transform-origin: 50% 50%;
   
 }
 .zaloRingCircleFill {
-  top: 10px;
-  right: 55px;
   width: 55px;
   height: 55px;
   position: absolute;
@@ -71,9 +45,8 @@
 }
 
 .phoneRingImgCircle {
-  background-color: #e60808;
-  width: 33px;
-  height: 33px;
+  width: 55px;
+  height: 55px;
   position: absolute;
   border-radius: 100%;
   display: flex;
