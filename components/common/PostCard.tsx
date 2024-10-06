@@ -38,9 +38,9 @@ const PostCard: FC<Props> = ({
       <div className="p-2 flex-1 flex flex-col">
         <Link href={"/bai-viet/" + slug}>
           <a>
-            <h1 className="font-semibold text-primary-dark dark:text-primary">
+            <h2 className="font-semibold text-primary-dark dark:text-primary">
               {trimText(title, 50)}
-            </h1>
+            </h2>
             <p className="text-secondary-dark">{trimText(meta, 70)}</p>
           </a>
         </Link>

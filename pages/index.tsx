@@ -28,6 +28,8 @@ const Home: NextPage<Props> = ({ posts, kesieuthiProducts,ketonloProducts}) => {
     <DefaultLayout>
       <Head>
         <title>Giá kệ siêu thị Tân Phát - Uy tín - Chất lượng - Dẫn đầu</title>
+        <link rel="canonical" href="https://giaketanphat.com/" />
+
         <meta
           name="description"
           content="Giá kệ siêu thị Tân Phát, với gần một thập kỷ hoạt động trong ngành cung cấp giải pháp kệ hàng, đã nhanh chóng trở thành một trong những tên tuổi uy tín và đáng tin cậy tại Việt Nam"
@@ -50,7 +52,46 @@ const Home: NextPage<Props> = ({ posts, kesieuthiProducts,ketonloProducts}) => {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:url" content="https://giaketanphat.com" />
-        
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "Product",
+                "name": "Kệ tôn đục lỗ",
+                "description": "Kệ tôn đục lỗ chất lượng cao, bền đẹp, phù hợp cho siêu thị và cửa hàng.",
+                "brand": {
+                  "@type": "Brand",
+                  "name": "Giá kệ Tân Phát"
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "priceCurrency": "VND",
+                  "price": "",
+                  "availability": "https://schema.org/InStock"
+                }
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "Product",
+                "name": "Kệ siêu thị lưng lưới",
+                "description": "Dòng sản phẩm kệ siêu thị lưng lưới của Tân Phát mang lại sự tiện lợi và hiệu quả cho việc trưng bày hàng hóa trong cửa hàng của bạn. Khám phá giải pháp kệ linh hoạt này với mức giá phải chăng từ Tân Phát ngay hôm nay!",
+                "brand": {
+                  "@type": "Brand",
+                  "name": "Giá kệ Tân Phát"
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "priceCurrency": "VND",
+                  "price": "",
+                  "availability": "https://schema.org/InStock"
+                }
+              }
+            ])
+          }}
+        />
       </Head>
       <br />
       <Banner />

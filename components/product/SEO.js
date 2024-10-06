@@ -56,6 +56,9 @@ const SEO = ({ className }) => {
     <section className={`${className}`}>
       <div className="container px-4 mx-auto">
         <div className="lg:flex flex-col mt-5 text-left w-full lg:w-10/12 mx-auto ">
+        <h1>
+        Giá kệ siêu thị Tân Phát - Uy tín - Chất lượng - Dẫn đầu
+        </h1>
           <h2 className="font-bold text-gray-800 text-xl md:text-2xl mt-2 mb-5 dark:text-light dark:text-primary">
             1. Giới thiệu về Giá kệ siêu thị Tân Phát
           </h2>
