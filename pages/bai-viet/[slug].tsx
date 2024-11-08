@@ -34,7 +34,10 @@ const SinglePost: NextPage<Props> = ({ post }) => {
         <meta property="og:url" content={`https://giaketanphat.com/bai-viet/${slug}`} />
 
       </Head>
-      <div className="pb-20 container mx-auto px-4 mt-[60px] sm:mt-[91px] max-w-2xl md:max-w-4xl lg:max-w-5xl">
+
+    <div className="container mx-auto px-8 py-8 md:flex md:space-x-8">
+    <div className="col-12 col-md-10 mb-4 mb-md-0">
+    <div className="pb-20 container mx-auto px-4 mt-[60px] sm:mt-[91px]">
       <br />
         <h1 className="text-4xl font-semibold text-primary-dark dark:text-primary py-2 item-center text-center ">
           {title}
@@ -43,10 +46,15 @@ const SinglePost: NextPage<Props> = ({ post }) => {
         <Share url={host + '/' +slug}/>
         <br />
         </div>
-        <div className="blog prose prose-sm dark:prose-invert max-w-2xl md:max-w-4xl lg:max-w-5xl">
+        <div className="blog prose prose-lg dark:prose-invert max-w-2xl md:max-w-4xl lg:max-w-5xl">
           {parse(content)}
         </div>
-        <div className="pt-5 max-w-2xl md:max-w-4xl lg:max-w-5xl">
+
+      </div>
+    </div>
+    
+    <div className="col-12 col-md-2 px-2 sm:mt-[91px]">
+    <div className="pt-5">
         <p className="text-xl font-semibold text-primary-dark dark:text-primary p-2 mb-4">
             Bài viết gần đây
           </p>
@@ -60,7 +68,10 @@ const SinglePost: NextPage<Props> = ({ post }) => {
       })}
     </div>
         </div>
-      </div>
+    </div>
+    </div>
+  
+   
       </DefaultLayout>
   );
 };

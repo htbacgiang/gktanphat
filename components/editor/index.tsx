@@ -1,11 +1,19 @@
 import { ChangeEventHandler, FC, useEffect, useState } from "react";
 import { useEditor, EditorContent, getMarkRange, Range } from "@tiptap/react";
+
 import StarterKit from "@tiptap/starter-kit";
 import Underline from "@tiptap/extension-underline";
 import Placeholder from "@tiptap/extension-placeholder";
 import Link from "@tiptap/extension-link";
 import Youtube from "@tiptap/extension-youtube";
 import TipTapImage from "@tiptap/extension-image";
+import TextStyle from "@tiptap/extension-text-style";
+import Color from "@tiptap/extension-color";
+import TextAlign from "@tiptap/extension-text-align";
+import Table from '@tiptap/extension-table';
+import TableRow from '@tiptap/extension-table';
+import TableCell from '@tiptap/extension-table';
+import TableHeader  from '@tiptap/extension-table';
 
 import ToolBar from "./ToolBar";
 import EditLink from "./Link/EditLink";
@@ -31,7 +39,7 @@ interface Props {
 
 const Editor: FC<Props> = ({
   initialValue,
-  btnTitle = "Submit",
+  btnTitle = "Đăng bài",
   busy = false,
   onSubmit,
 }): JSX.Element => {
@@ -67,6 +75,11 @@ const Editor: FC<Props> = ({
     extensions: [
       StarterKit,
       Underline,
+      TextStyle,
+      Color,
+      TextAlign.configure({
+        types: ["heading", "paragraph"],
+      }),
       Link.configure({
         autolink: false,
         linkOnPaste: false,
@@ -76,7 +89,7 @@ const Editor: FC<Props> = ({
         },
       }),
       Placeholder.configure({
-        placeholder: "Type something",
+        placeholder: "Viết bài nhớ chuẩn SEO",
       }),
       Youtube.configure({
 
@@ -90,6 +103,7 @@ const Editor: FC<Props> = ({
         },
       }),
     ],
+    
     editorProps: {
       handleClick(view, pos, event) {
         const { state } = view;
@@ -101,7 +115,7 @@ const Editor: FC<Props> = ({
       },
       attributes: {
         class:
-          "prose prose-lg focus:outline-none dark:prose-invert max-w-full mx-auto h-full",
+          "blog prose prose-lg focus:outline-none dark:prose-invert max-w-full mx-auto h-full",
       },
     },
   });
@@ -170,7 +184,7 @@ const Editor: FC<Props> = ({
           <input
             type="text"
             className="py-2 outline-none bg-transparent w-full border-0 border-b-[1px] border-secondary-dark dark:border-secondary-light text-3xl font-semibold italic text-primary-dark dark:text-primary mb-3"
-            placeholder="Title"
+            placeholder="Tiêu đề bài viết"
             onChange={updateTitle}
             value={post.title}
           />
@@ -182,7 +196,7 @@ const Editor: FC<Props> = ({
         </div>
 
         {editor ? <EditLink editor={editor} /> : null}
-        <EditorContent editor={editor} className="min-h-[300px]" />
+        <EditorContent editor={editor} className="min-h-[300px] " />
         <div className="h-[1px] w-full bg-secondary-dark dark:bg-secondary-light my-3" />
         <SEOForm
           onChange={updateSeoValue}

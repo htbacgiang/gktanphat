@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { useState } from "react";
 import { Editor } from "@tiptap/react";
 import { AiFillCaretDown } from "react-icons/ai";
 import { RiDoubleQuotesL } from "react-icons/ri";
@@ -12,9 +13,8 @@ import {
   BsTypeItalic,
   BsTypeUnderline,
   BsImageFill,
-  BsLink45Deg,
-  BsYoutube,
 } from "react-icons/bs";
+import { MdFormatAlignCenter,MdFormatAlignRight,MdFormatAlignLeft } from "react-icons/md";
 
 import Button from "./Button";
 import { getFocusedEditor } from "../EditorUtils";
@@ -32,7 +32,16 @@ const ToolBar: FC<Props> = ({
   editor,
   onOpenImageClick,
 }): JSX.Element | null => {
+  const [color, setColor] = useState<string>("#000000");
+
   if (!editor) return null;
+
+  const handleColorChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const selectedColor = event.target.value;
+    setColor(selectedColor);
+    getFocusedEditor(editor).setColor(selectedColor).run();
+  };
+
 
   const options = [
     {
@@ -87,9 +96,9 @@ const ToolBar: FC<Props> = ({
       {/* paragraph, heading 1, 2, 3 */}
       <DropdownOptions options={options} head={<Head />} />
 
-      <div className="h-4 w-[1px] bg-secondary-dark dark:bg-secondary-light mx-8" />
+      <div className="h-4 w-[1px] bg-secondary-dark dark:bg-secondary-light mx-2" />
 
-      <div className="flex items-center space-x-3">
+      <div className="flex items-center space-x-1 ">
         <Button
           active={editor.isActive("bold")}
           onClick={() => getFocusedEditor(editor).toggleBold().run()}
@@ -117,11 +126,45 @@ const ToolBar: FC<Props> = ({
         >
           <BsTypeStrikethrough />
         </Button>
+
+         {/* Color Picker */}
+      <div className="flex items-center space-x-3">
+        <input
+          type="color"
+          value={color}
+          onChange={handleColorChange}
+          title="Select text color"
+          className="w-8 h-8 p-0 border-none"
+        />
       </div>
 
-      <div className="h-4 w-[1px] bg-secondary-dark dark:bg-secondary-light mx-8" />
+   {/* Alignment Buttons */}
 
-      <div className="flex items-center space-x-3">
+      </div>
+
+      <div className="h-4 w-[1px] bg-secondary-dark dark:bg-secondary-light mx-2" />
+      
+      <div className="flex items-center space-x-2">
+      <Button
+          active={editor.isActive({ textAlign: "left" })}
+          onClick={() => editor.chain().focus().setTextAlign("left").run()}
+        >
+          <MdFormatAlignLeft />
+        </Button>
+
+        <Button
+          active={editor.isActive({ textAlign: "center" })}
+          onClick={() => editor.chain().focus().setTextAlign("center").run()}
+        >
+          <MdFormatAlignCenter />
+        </Button>
+
+        <Button
+          active={editor.isActive({ textAlign: "right" })}
+          onClick={() => editor.chain().focus().setTextAlign("right").run()}
+        >
+          <MdFormatAlignRight  />
+        </Button>
         <Button
           active={editor.isActive("blockquote")}
           onClick={() => getFocusedEditor(editor).toggleBlockquote().run()}
@@ -158,9 +201,10 @@ const ToolBar: FC<Props> = ({
         >
           <BsListUl />
         </Button>
+        
       </div>
 
-      <div className="h-4 w-[1px] bg-secondary-dark dark:bg-secondary-light mx-8" />
+      <div className="h-4 w-[1px] bg-secondary-dark dark:bg-secondary-light mx-2" />
 
       <div className="flex items-center space-x-3">
         <EmbedYoutube onSubmit={handleEmbedYoutube} />

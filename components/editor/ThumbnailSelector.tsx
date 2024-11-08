@@ -45,7 +45,7 @@ const ThumbnailSelector: FC<Props> = ({
             }
           />
         ) : (
-          <PosterUI label="Thumbnail" />
+          <PosterUI label="Ảnh đại diện" />
         )}
       </label>
     </div>

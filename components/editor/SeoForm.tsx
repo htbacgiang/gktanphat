@@ -76,7 +76,7 @@ const SEOForm: FC<Props> = ({
           value={meta}
           onChange={handleChange}
           className={classnames(commonInput, "text-lg h-20 resize-none")}
-          placeholder="Meta description 150 characters will be fine"
+          placeholder="Meta description 200 characters will be fine"
         ></textarea>
         <p className="absolute bottom-3 right-3 text-primary-dark dark:text-primary text-sm">
           {meta.length}/200

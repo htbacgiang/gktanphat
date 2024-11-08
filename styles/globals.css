@@ -113,22 +113,43 @@
   border-radius: 2px;
 }
 
-.blog h2 {
-  font-size: 1rem !important;
-  line-height: 1rem !important;
-  margin-top: 0 !important;
+.blog h2 strong {
+  font-weight: 500 !important;
+  font-size: 1.2em !important;
+  margin-top: 0px !important;
+  margin-bottom: 5px !important;
+ }
+ .blog h2  {
+  font-weight: 500 !important;
+  font-size: 1.2em !important;
+  margin-top: 0px !important;
   margin-bottom: 5px !important;
  }
  .blog h3 {
-  font-size: 1rem !important;
-  line-height: 1rem !important;
+  font-size: 1.1em !important;
+  margin-top: 0 !important;
+  margin-bottom: 5px !important;
+ }
+ .blog h3 strong {
+  font-weight: 500 !important;
   margin-top: 0 !important;
   margin-bottom: 5px !important;
  }
  .blog p {
-  margin-top: 5px !important;
-  margin-bottom: 5px !important;
+  font-size: 16px !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
  }
+ .blog a{
+  font-weight: 400 !important;
+  font-style: italic !important;
+  text-decoration: none !important;
+  color: blue !important;
+ }
+ .blog a:hover{
+  color: rgb(255, 68, 0) !important;
+ }
+ 
 @media only screen and (max-width: 480px) {
   .notfound .notfound-404 {
     position: relative;

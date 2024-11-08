@@ -89,7 +89,7 @@ const GalleryModal: FC<Props> = ({
                     onChange={({ target }) => setAltText(target.value)}
                   ></textarea>
 
-                  <ActionButton onClick={handleSelection} title="Select" />
+                  <ActionButton onClick={handleSelection} title="Lựa chọn" />
 
                   <div className="relative aspect-video bg-png-pattern">
                     <Image
